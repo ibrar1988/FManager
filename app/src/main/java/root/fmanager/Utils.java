@@ -60,7 +60,7 @@ class Utils {
         return success;
     }
 
-    static boolean copyFiles (File[] files, String copyTo) {
+    private static boolean copyFiles(File[] files, String copyTo) {
         try {
             for (final File file : files) {
                 final boolean[] replaceAll = {false};
