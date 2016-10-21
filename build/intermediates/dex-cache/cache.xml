@@ -2,175 +2,193 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
-        revision="24.0.2"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-24.2.1_bbc2de772998c7f0f7490240d5451331ccf1a3d2.jar" />
+        revision="23.0.3"
+        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
+        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.2.1_92513db658dc729c4426539692a6592179afafa6/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/eu.chainfire/libsuperuser/1.0.0.201608240809/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
-        revision="24.0.2"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.2.1_7105c4e41c4ca7577fd9fabfe76369aee240c4ff.jar" />
+        revision="25.0.0"
+        sha1="054e8bd9935e1d1cdf411dad8eda6a950a21ee60">
+        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/eu.chainfire-libsuperuser-1.0.0.201608240809_36fde9805e08dccf8e27da3e37fa84c77ce4da15/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/user/Android/SDK/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
         optimize="true"
-        revision="24.0.2"
-        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/pre-dexed/debug/support-annotations-24.2.1_40ca0cf33d35a93196048f3f91f2266d1bf074bc.jar" />
+        revision="25.0.0"
+        sha1="bf1b543c8393218a93cca6a04ec0c9621fd394a7">
+        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_41a7b423f55ffa6bb95fa649f92c72ca136f0f42/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
         optimize="true"
-        revision="24.0.2"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_75168115a0bb3cd606991b44df6ac03eaa8e4424.jar" />
+        revision="23.0.3"
+        sha1="2fc06bababc49bf51dc79342eca8d0a8ce97053d">
+        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_2ae342b5174d23e8ef6c8da07dd9a6bbd114deb8/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
         optimize="true"
-        revision="24.0.2"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_896440552fca76dcfe292bb8cb974e2a686dc5f1.jar" />
+        revision="24.0.3"
+        sha1="2fc06bababc49bf51dc79342eca8d0a8ce97053d">
+        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_2ae342b5174d23e8ef6c8da07dd9a6bbd114deb8/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
-        revision="24.0.2"
-        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
-        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-24.2.1_3973d00eb18ca75e09a50ac8a13490fa3da90a76.jar" />
+        revision="23.0.3"
+        sha1="72961d8b453b46e277702f18de9d210bc019e36e">
+        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.2.1_c10ce7de28d23edecee3bd3385311c6e38bd08b7/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.2.1_a9e883184e3d86a410a086806f5532c88d36bcf0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-24.2.1_a2a9c8f85fda5887b3a162cca857add19ee5543a.jar" />
-    </item>
-    <item
-        is-multidex="false"
+        is-multidex="true"
         jar="/home/user/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.5/2852e6e05fbb95076fc091f6d1780f1f8fe35e0f/commons-io-2.5.jar"
-        jumboMode="false"
+        jumboMode="true"
         optimize="true"
-        revision="24.0.2"
+        revision="25.0.0"
         sha1="2852e6e05fbb95076fc091f6d1780f1f8fe35e0f">
-        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/pre-dexed/debug/commons-io-2.5_64ef2ddac7deb2059b4bcc7b249e142e43e26795.jar" />
+        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/commons-io-2.5_64ef2ddac7deb2059b4bcc7b249e142e43e26795/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.2.1/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
-        revision="24.0.2"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_893f4be9edacba33e5047b4c39e93cf219f197db.jar" />
+        revision="23.0.3"
+        sha1="cb86970df0f0f25f766d320b279c7858c1ca0003">
+        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-23.2.1_d9d9757e2179a952a31673bb55fc9767b1d7f0c5/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
-        revision="24.0.2"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.2.1_5927c8e6fd1aa0059505b63578bc31ea6745a7a9.jar" />
+        revision="23.0.3"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.2.1_ad3086aca2d473b52b015dfac398877c5cccac47/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
-        revision="24.0.2"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-24.2.1_235b47c492c9a68c97a8520511a50303a549e358.jar" />
+        revision="23.0.3"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.2.1_d07089c7a93df9e2c40f22da4a40a0849c53cd2c/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.2.1/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/user/Android/SDK/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
+        jumboMode="true"
         optimize="true"
-        revision="24.0.2"
-        sha1="c5e6490573cd2cc8018417f60ddd251138b6ed61">
-        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-24.2.1_1226983de756e31bacb5c974686425cfe843f0de.jar" />
+        revision="23.0.3"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.2.1_3a0b81a9b2f4532f52a66605bffebceea232511a/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.1/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
-        revision="24.0.2"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_53cddb00bc93bb1d7362528f24298e4eb074c935.jar" />
+        revision="23.0.3"
+        sha1="e3885783ff8926ed9e2fdcd16816c2e1e73e7aee">
+        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.2.1_8a873e8360dcca7b5d7e47435dd92c83f0a44bcf/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
         optimize="true"
-        revision="24.0.2"
-        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
-        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/pre-dexed/debug/com.android.support-design-24.2.1_ea754ec778be9dbc2bc44152631db614ba58d6fb.jar" />
+        revision="24.0.3"
+        sha1="53a39d0c743e29efead956604636e92a8acac312">
+        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_41a7b423f55ffa6bb95fa649f92c72ca136f0f42/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
         optimize="true"
-        revision="24.0.2"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_890addbf1c4b032d8de1c2ddb7add65c02711ff1.jar" />
+        revision="23.0.3"
+        sha1="1f1fa83c8f75eb659b294e12189ec7c8e3e1905c">
+        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_41a7b423f55ffa6bb95fa649f92c72ca136f0f42/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
-        revision="24.0.2"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-24.2.1_f5bb63c568f4ae80a93642a22a5ad1317e4ac536.jar" />
+        revision="23.0.3"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.2.1_7a14b0e55f3e382d34ef80b7a96d70703a4e978e/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
+        jumboMode="true"
         optimize="true"
-        revision="24.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.2.1_c68feff84f9d1fa234b1025b2341ce6c5cab21ad.jar" />
+        revision="23.0.3"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.2.1_703bfbd81725999381f7acb46358b4077d9ceaf9/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/user/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.5/2852e6e05fbb95076fc091f6d1780f1f8fe35e0f/commons-io-2.5.jar"
+        jumboMode="true"
         optimize="true"
-        revision="24.0.2"
-        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-24.2.1_24979e13c164d12b41ac6e0716c45051809e31bc.jar" />
+        revision="23.0.3"
+        sha1="2852e6e05fbb95076fc091f6d1780f1f8fe35e0f">
+        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/commons-io-2.5_64ef2ddac7deb2059b4bcc7b249e142e43e26795/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/eu.chainfire/libsuperuser/1.0.0.201608240809/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="054e8bd9935e1d1cdf411dad8eda6a950a21ee60">
+        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/eu.chainfire-libsuperuser-1.0.0.201608240809_36fde9805e08dccf8e27da3e37fa84c77ce4da15/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7231a850b058483ba9fd484804b98cdedf9ea67c">
+        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_2ae342b5174d23e8ef6c8da07dd9a6bbd114deb8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/exploded-aar/eu.chainfire/libsuperuser/1.0.0.201608240809/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="054e8bd9935e1d1cdf411dad8eda6a950a21ee60">
+        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/eu.chainfire-libsuperuser-1.0.0.201608240809_36fde9805e08dccf8e27da3e37fa84c77ce4da15/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/user/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.5/2852e6e05fbb95076fc091f6d1780f1f8fe35e0f/commons-io-2.5.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="2852e6e05fbb95076fc091f6d1780f1f8fe35e0f">
+        <dex dex="/home/user/AndroidStudioProjects/FManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/commons-io-2.5_64ef2ddac7deb2059b4bcc7b249e142e43e26795/classes.dex" />
     </item>
 
 </items>

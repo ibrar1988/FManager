@@ -3,7 +3,6 @@ package root.fmanager;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -14,8 +13,7 @@ import android.widget.Filter;
 import android.widget.Filterable;
 
 import java.io.File;
-import java.util.Arrays;
-import java.util.HashSet;
+import java.util.TreeSet;
 
 @SuppressWarnings("WeakerAccess")
 public class RVFrag extends Fragment implements Filterable {
@@ -69,25 +67,27 @@ public class RVFrag extends Fragment implements Filterable {
         protected FilterResults performFiltering(CharSequence constraint) {
             FilterResults results = new FilterResults();
             if (constraint.length() == 0) {
-                results.values = new HashSet<>(Arrays.asList(mAdapter.unfilteredDataset));
+                results.values = new TreeSet<>(mAdapter.unfilteredDataset);
                 return results;
             } else {
-                results.values = new HashSet<File>();
+                results.values = new TreeSet<File>();
                 for (File file : mAdapter.unfilteredDataset) {
                     if (file.getName().toLowerCase().contains(constraint)) {
-                        ((HashSet<File>)results.values).add(file);
+                        ((TreeSet<File>)results.values).add(file);
                     }
                 }
             }
-            results.count = ((HashSet<File>)results.values).size();
+            results.count = ((TreeSet<File>)results.values).size();
             return results;
         }
 
         @Override
         protected void publishResults(CharSequence constraint, FilterResults results) {
-            mAdapter.mDataset = Utils.sort(((HashSet<File>)results.values).
-                    toArray(new File[((HashSet<File>)results.values).size()]),
-                    PreferenceManager.getDefaultSharedPreferences(context).getBoolean("hidden", false));
+            /*mAdapter.mDataset = Utils.sort(((TreeSet<File>)results.values).
+                    toArray(new File[((TreeSet<File>)results.values).size()]),
+                    PreferenceManager.getDefaultSharedPreferences(context).getBoolean("hidden", false));*/
+            mAdapter.mDataset.clear();
+            mAdapter.mDataset.addAll((TreeSet<File>)results.values);
             mAdapter.notifyDataSetChanged();
         }
     }

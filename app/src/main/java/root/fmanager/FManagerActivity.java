@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
@@ -193,8 +194,7 @@ public class FManagerActivity extends AppCompatActivity
             super.onBackPressed();
         }
         else if (!recyclerViewFrag.getAdapter().selectedFiles.isEmpty()) {
-            recyclerViewFrag.getAdapter().selectedFiles = null;
-            recyclerViewFrag.getAdapter().selectedFiles = new HashSet<>();
+            recyclerViewFrag.getAdapter().selectedFiles.clear();
             recyclerViewFrag.getAdapter().openDirectory(recyclerViewFrag.getAdapter().currentOpenDir);
             selectionModeToggle(recyclerViewFrag.getAdapter().selectedFiles.size());
         }
@@ -246,12 +246,12 @@ public class FManagerActivity extends AppCompatActivity
         return true;
     }
 
-    @Override
+    /*@Override
     public void onContentChanged() {
         super.onContentChanged();
         if (recyclerViewFrag != null)
             recyclerViewFrag.openDirectory(recyclerViewFrag.getCurrentOpenDir());
-    }
+    }*/
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
@@ -294,7 +294,8 @@ public class FManagerActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_root) {
-            recyclerViewFrag.openDirectory(homeDir = new File("/"));
+            homeDir = new File("/");
+            recyclerViewFrag.openDirectory(homeDir);
         } else if (id == R.id.nav_int) {
             recyclerViewFrag.openDirectory(Environment.getExternalStorageDirectory());
         } /*else if (id == R.id.nav_ext) {
@@ -308,6 +309,12 @@ public class FManagerActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer != null) drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        recyclerViewFrag.openDirectory(recyclerViewFrag.getCurrentOpenDir());
     }
 
     void selectionModeToggle(int noOfItemsSelected) {

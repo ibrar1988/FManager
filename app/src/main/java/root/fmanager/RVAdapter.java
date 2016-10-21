@@ -7,15 +7,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.text.InputType;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -25,7 +21,9 @@ import android.widget.Toast;
 import java.io.File;
 import java.math.BigDecimal;
 import java.net.URLConnection;
-import java.util.HashSet;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.TreeSet;
 
 @SuppressWarnings("Duplicates")
 class RVAdapter extends RecyclerView.Adapter<RVAdapter.ViewHolder> implements View.OnClickListener {
@@ -34,14 +32,29 @@ class RVAdapter extends RecyclerView.Adapter<RVAdapter.ViewHolder> implements Vi
 
     private int colorCard, colorCardSelected, iconColor;
 
-    File[] mDataset;
-    File[] unfilteredDataset;
+    private Comparator<File> fileComparator = new Comparator<File>() {
+        @Override
+        public int compare(File file, File t1) {
+            if (!PreferenceManager.getDefaultSharedPreferences(context).getBoolean("hidden", false)
+                    && file.getName().startsWith(".")) {
+                return 0;
+            }
+            if (file.isDirectory()) {
+                return file.getName().compareToIgnoreCase(t1.getName()) * 50;
+            }
+            else {
+                return file.getName().compareToIgnoreCase(t1.getName());
+            }
+        }
+    };
+    TreeSet<File> mDataset = new TreeSet<>(fileComparator);
+    TreeSet<File> unfilteredDataset = new TreeSet<>(fileComparator);
 
     File currentOpenDir;
 
     private Context context;
 
-    HashSet<File> selectedFiles = new HashSet<>();
+    TreeSet<File> selectedFiles = new TreeSet<>(fileComparator);
 
     // Provide a suitable constructor (depends on the kind of dataset)
     RVAdapter(RVFrag recyclerView, Context context) {
@@ -56,7 +69,6 @@ class RVAdapter extends RecyclerView.Adapter<RVAdapter.ViewHolder> implements Vi
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder
     class ViewHolder extends RecyclerView.ViewHolder {
-        CardView mCardView;
         LinearLayout mCardViewLL;
         ImageView iconCardType;
         ImageView iconLockState;
@@ -65,7 +77,16 @@ class RVAdapter extends RecyclerView.Adapter<RVAdapter.ViewHolder> implements Vi
         TextView filePath;
         ViewHolder(View v) {
             super(v);
-            mCardView = (CardView) v.findViewById(R.id.card_view);
+            v.setOnClickListener(RVAdapter.this);
+            v.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    v.findViewById(R.id.card_view_ll).setBackgroundColor(colorCardSelected);
+                    selectedFiles.add(new File(((TextView)v.findViewById(R.id.card_file_path)).getText().toString()));
+                    ((FManagerActivity) recyclerView.getActivity()).selectionModeToggle(selectedFiles.size());
+                    return true;
+                }
+            });
             mCardViewLL = (LinearLayout) v.findViewById(R.id.card_view_ll);
             iconCardType = (ImageView) v.findViewById(R.id.card_type);
             iconLockState = (ImageView) v.findViewById(R.id.card_lock_state);
@@ -85,32 +106,19 @@ class RVAdapter extends RecyclerView.Adapter<RVAdapter.ViewHolder> implements Vi
         return new ViewHolder(v);
     }
 
-    @Override
-    public void onViewDetachedFromWindow(ViewHolder holder) {
-        super.onViewDetachedFromWindow(holder);
-        holder.mCardView.clearAnimation();
-    }
-
-    private void setAnimation(View viewToAnimate) {
-        Animation animation = AnimationUtils.loadAnimation(context, android.R.anim.fade_in);
-        viewToAnimate.startAnimation(animation);
-    }
-
     // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
 
-        File fileAtPosition = mDataset[position];
-
-        setAnimation(holder.mCardView);
+        File fileAtPosition = mDataset.toArray(new File[mDataset.size()])[position];
 
         if (selectedFiles.contains(fileAtPosition)) {
             holder.mCardViewLL.setBackgroundColor(colorCardSelected);
         } else holder.mCardViewLL.setBackgroundColor(colorCard);
 
-        String lastLine;
+        /*String lastLine;
         if (fileAtPosition.isFile() && fileAtPosition.canRead() &&
                 (lastLine = Utils.lastLineOfFile(fileAtPosition)) != null &&
                 lastLine.startsWith("iv:")) {
@@ -118,7 +126,7 @@ class RVAdapter extends RecyclerView.Adapter<RVAdapter.ViewHolder> implements Vi
             holder.iconLockState.setColorFilter(iconColor);
         } else {
             holder.iconLockState.setVisibility(View.GONE);
-        }
+        }*/
 
         holder.fileName.setText(fileAtPosition.getName());
         holder.filePath.setText(fileAtPosition.getAbsolutePath());
@@ -153,28 +161,18 @@ class RVAdapter extends RecyclerView.Adapter<RVAdapter.ViewHolder> implements Vi
         }
 
         holder.iconCardType.setColorFilter(iconColor);
-
-        holder.mCardView.setOnClickListener(this);
-        holder.mCardView.setOnLongClickListener(
-                new View.OnLongClickListener() {
-                    @Override
-                    public boolean onLongClick(View v) {
-                        v.findViewById(R.id.card_view_ll).setBackgroundColor(colorCardSelected);
-                        selectedFiles.add(new File(((TextView)v.findViewById(R.id.card_file_path)).getText().toString()));
-                        ((FManagerActivity) recyclerView.getActivity()).selectionModeToggle(selectedFiles.size());
-                        return true;
-                    }
-                }
-        );
     }
 
     void openDirectory (File dirToOpen) {
         currentOpenDir = dirToOpen;
-        mDataset = Utils.sort(dirToOpen.listFiles(),
-                PreferenceManager.getDefaultSharedPreferences(context).getBoolean("hidden", false));
+        mDataset.clear();
+        mDataset.addAll(Arrays.asList(dirToOpen.listFiles()));
+        //mDataset = Utils.sort(dirToOpen.listFiles(),
+        //        PreferenceManager.getDefaultSharedPreferences(context).getBoolean("hidden", false));
         notifyDataSetChanged();
         ((FManagerActivity)recyclerView.getActivity()).toolbarOpenDirPath.setText(currentOpenDir.getAbsolutePath());
-        unfilteredDataset = mDataset;
+        unfilteredDataset.clear();
+        unfilteredDataset.addAll(mDataset);
     }
 
     @Override
@@ -245,8 +243,7 @@ class RVAdapter extends RecyclerView.Adapter<RVAdapter.ViewHolder> implements Vi
                                         file.getParent() + File.separator + edRename.getText().toString()))) {
                             Toast.makeText(context, "File renamed.", Toast.LENGTH_SHORT).show();
                         } else Toast.makeText(context, "Rename failed.", Toast.LENGTH_SHORT).show();
-                        selectedFiles = null;
-                        selectedFiles = new HashSet<>();
+                        selectedFiles.clear();
                         openDirectory(currentOpenDir);
                         ((FManagerActivity) recyclerView.getActivity()).selectionModeToggle(selectedFiles.size());
                     }
@@ -272,8 +269,7 @@ class RVAdapter extends RecyclerView.Adapter<RVAdapter.ViewHolder> implements Vi
                                         "Cannot delete some files/folders. Permission denied.",
                                         Toast.LENGTH_SHORT).show();
                         }
-                        selectedFiles = null;
-                        selectedFiles = new HashSet<>();
+                        selectedFiles.clear();
                         openDirectory(currentOpenDir);
                         ((FManagerActivity) recyclerView.getActivity()).selectionModeToggle(selectedFiles.size());
                     }
@@ -287,7 +283,7 @@ class RVAdapter extends RecyclerView.Adapter<RVAdapter.ViewHolder> implements Vi
                 deleteConfirmationDialog.show();
                 break;
 
-            case R.id.fab:
+            /*case R.id.fab:
                 boolean folderSelected = false;
                 for (final File file : selectedFiles) {
                     if (file.isFile()) {
@@ -379,7 +375,7 @@ class RVAdapter extends RecyclerView.Adapter<RVAdapter.ViewHolder> implements Vi
                 if (folderSelected)
                     Toast.makeText(context, "Folder encryption is not supported.", Toast.LENGTH_SHORT).show();
                 notifyDataSetChanged();
-                break;
+                break;*/
         }
     }
 
@@ -387,7 +383,7 @@ class RVAdapter extends RecyclerView.Adapter<RVAdapter.ViewHolder> implements Vi
     @Override
     public int getItemCount() {
         if (mDataset != null)
-            return mDataset.length;
+            return mDataset.size();
         return 0;
     }
 }

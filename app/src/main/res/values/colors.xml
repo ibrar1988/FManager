@@ -3,6 +3,7 @@
     <color name="colorPrimaryLT">#EEEEEE</color>
     <color name="colorPrimaryDarkLT">#1A000000</color>
     <color name="colorAccentLT">#B0BEC5</color>
+    <color name="blue_dress">#157DEC</color>
 
     <color name="colorPrimaryDT">#4D5656</color>
     <color name="colorPrimaryDarkDT">#0D000000</color>
@@ -75,7 +76,6 @@
     <color name="blue_angel">#B7CEEC</color>
     <color name="blue_bell">#A2A2D0</color>
     <color name="blue_diamond">#4EE2EC</color>
-    <color name="blue_dress">#157DEC</color>
     <color name="blue_eyes">#1569C7</color>
     <color name="blue_gray">#98AFC7</color>
     <color name="blue_green">#0D98BA</color>

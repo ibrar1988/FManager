@@ -15,6 +15,7 @@
             android:name=".FManagerActivity"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustPan"
+            android:configChanges="orientation"
             android:theme="@style/AppTheme.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
